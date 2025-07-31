@@ -12,7 +12,8 @@ button:focus{
 }
 
 :root {
-    --btn-size: 5%;
+    --btn-size: 1.3rem;
+    --btn-size-width: 20rem;
 
     --background: #070402;
     --background2: #fdf7dd;
@@ -23,7 +24,84 @@ button:focus{
     --text-black: #070402;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (min-width: 1100px) {
+
+    .home-page {
+        display: grid;
+        height: 90vh;
+        position: relative;
+        background-color: var(--background);
+        background-image: url("assets/bg-image.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .home-content {
+        color: var(--text);
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100vh;
+        background-color: rgba(0, 0, 0, 0.300);
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .home-content .col-1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 3.5rem 9rem;
+        gap: 2rem
+    }
+
+    .home-content .col-1 img {
+        width: 85%;
+    }
+
+    .home-content .col-1 .content-2 button {
+        font-size: 1.2rem;
+        width: 85%;
+        border: 0;
+        border-radius: 12px;
+        color: var(--text);
+        padding: var(--btn-size);
+        background-color: var(--background);
+    }
+
+    .home-content .col-1 .content-2 button:hover {
+        border: 0;
+        border-radius: 12px;
+        color: var(--text-black);
+        background-color: var(--background2);
+    }
+
+    .home-content .col-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        position: relative;
+        right: 20px;
+    }
+
+    .home-content .col-2 img {
+        width: 70%;
+    }
+
+    #open-sidebar {
+        display: none;
+    }
+
+    .navbar {
+        padding: 0 3rem;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
     #navbar-content {
         display: none;
     }
@@ -36,37 +114,64 @@ button:focus{
     #open-sidebar {
         display: block;
     }
-}
 
-@media screen and (min-width: 1251px) {
-    #open-sidebar {
-        display: none;
+    .home-content {
+        font-size: large;
+        color: var(--text);
+        position: relative;
+        display: grid;
+        grid-template-rows: 90vh;
+        background-color: rgba(0, 0, 0, 0.300);
+        max-width: 100%;
+        height: 100%;
+        overflow: hidden;
     }
 
-    .navbar {
-        margin: 0;
-        padding: 0 3rem;
+
+    .home-content .col-1 {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 3.5rem 9rem;
+        gap: 2rem
     }
     
-}
-
-@media screen and (max-width: 1050px){
-    .home-content {
-        display: grid;
-        grid-template-columns: 1fr;
+    .home-content .col-1 img {
+        width: 30%;
     }
 
     .home-content .col-2 {
         display: none;
     }
+
+    /* .home-content .col-1 img {
+        display: none;
+    } */
+
+    .home-content .col-1 .content-2 button {
+        font-size: 1.2rem;
+        width: var(--btn-size-width);
+        border: 0;
+        border-radius: 12px;
+        color: var(--text);
+        padding: var(--btn-size);
+        background-color: var(--background);
+    }
+}
+
+@media screen and (max-width: 900px){
+    
 }
 
 body{
-    overflow-x: hidden;
-    min-width: 100%;
+
     max-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     grid-template-rows: auto auto auto;
 }
 
@@ -89,7 +194,6 @@ body{
     margin: 0 auto;
     display: flex;
     list-style: none;
-    
 }
 
 .navbar ul li {
@@ -103,7 +207,7 @@ body{
     opacity: 0;
     left: 0;
     bottom: 0;
-    width: 100%;
+    min-width: 100%;
     height: 7px;
     background-color: var(--accent);
 }
@@ -126,7 +230,6 @@ body{
 }
 
 .logo {
-
     width: 3.5rem;
 }
 
@@ -135,7 +238,7 @@ body{
     color: var(--text);
     z-index: 999;
     position: fixed;
-    transform: translate(-20rem,0);
+    transform: translate(-20rem, 0);
 }
 
 #open-sidebar{
@@ -199,74 +302,11 @@ body{
     background-color: var(--background);
 }
 
-.home-page{
-    display: grid;
-    grid-template-columns: 1;
-    height: 90vh;
-    position: relative;
+.home-page {
     background-color: var(--background);
     background-image: url("assets/bg-image.png");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.home-content{
-    color: var(--text);
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100vh;
-    background-color: rgba(0, 0, 0, 0.300);
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.home-content .col-1{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 3.5rem 9rem;
-    gap: 2rem
-}
-
-.home-content .col-1 img{
-    width: 85%;
-}
-
-/* .home-content .col-1 .content-1{
-    
-} */
-
-.home-content .col-1 .content-2 button{
-    font-size: 1.2rem;
-    width: 85%;
-    border: 0;
-    border-radius: 12px;
-    color: var(--text);
-    padding: var(--btn-size);
-    background-color: var(--background);
-}
-
-.home-content .col-1 .content-2 button:hover {
-    border: 0;
-    border-radius: 12px;
-    color: var(--text-black);
-    background-color: var(--background2);
-}
-
-.home-content .col-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
-    position: relative;
-    right: 20px;
-}
-
-.home-content .col-2 img {
-    width: 70%;
 }
 
 .team-section{
@@ -281,7 +321,7 @@ body{
 .team-section .header h1{
     font-size: 3rem;
     position: relative;
-    right: -2rem;
+    
     top: 2rem;
 }
 
@@ -317,7 +357,7 @@ body{
 
 .gallery-section .gallery-col2 .container button {
     font-size: 1.2rem;
-    width: 300px;
+    /* width: 300px; */
     border: 0;
     border-radius: 12px;
     color: var(--text);
