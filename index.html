@@ -9,8 +9,14 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <img src="assets/snaapy-logo.png" alt="" />
-      <ul>
+      <button id="open-sidebar" onclick="openSidebar()">
+        <img
+          src="assets/icons/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+          alt=""
+        />
+      </button>
+      <img class="logo" src="assets/snaapy-logo.png" alt="" />
+      <ul id="navbar-content">
         <li>Home</li>
         <li>Gallery</li>
         <li>About</li>
@@ -20,15 +26,53 @@
       </ul>
     </nav>
 
-    <nav class="sidebar">
-      <img src="assets/snaapy-logo.png" alt="" id="logo" />
+    <nav class="sidebar" id="sidebar">
+      <div class="header">
+        <img src="assets/snaapy-logo.png" alt="" class="logo" />
+        <button id="close-sidebar" onclick="closeSidebar()">
+          <img
+            src="assets/icons/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />
+        </button>
+      </div>
       <ul>
-        <li><img src="assets/icons/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""/>Home</li>
-        <li><img src="assets/icons/image_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""/>Gallery</li>
-        <li><img src="assets/icons/account_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""/>About</li>
-        <li><img src="assets/icons/credit_card_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""/>Harga</li>
-        <li><img src="assets/icons/help_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""/>Cara Pemesanan</li>
-        <li><img src="assets/icons/call_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""/>Contact</li>
+        <li>
+          <img
+            src="assets/icons/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />Home
+        </li>
+        <li>
+          <img
+            src="assets/icons/image_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />Gallery
+        </li>
+        <li>
+          <img
+            src="assets/icons/account_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />About
+        </li>
+        <li>
+          <img
+            src="assets/icons/credit_card_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />Harga
+        </li>
+        <li>
+          <img
+            src="assets/icons/help_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />Cara Pemesanan
+        </li>
+        <li>
+          <img
+            src="assets/icons/call_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />Contact
+        </li>
       </ul>
     </nav>
 
@@ -45,8 +89,8 @@
               <p>
                 <strong
                   >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Praesentium asperiores accusantium ab. Aspernatur maiores velit,
-                  quaerat, maxime beatae tempora.!</strong
+                  Praesentium asperiores accusantium ab. Aspernatur maiores
+                  velit, quaerat, maxime beatae tempora.!</strong
                 >
               </p>
             </div>
@@ -60,7 +104,7 @@
           </div>
         </div>
       </section>
-       <!-- Pemisah 1 -->
+      <!-- Pemisah 1 -->
       <section class="saperate-black">
         <h1>Lorem ipsum dolor sit amet.</h1>
       </section>
@@ -70,20 +114,16 @@
         <div class="header">
           <h1>Our Team:</h1>
         </div>
-        <div class="container">
-
-        </div>
+        <div class="container"></div>
       </section>
 
-       <!-- Pemisah 1 -->
+      <!-- Pemisah 1 -->
       <section class="saperate">
         <h1>Lorem ipsum dolor sit amet.</h1>
       </section>
 
       <div class="gallery-section">
-        <div class="gallery-col1">
-
-        </div>
+        <div class="gallery-col1"></div>
         <div class="gallery-col2">
           <div class="container">
             <div class="title">
@@ -95,7 +135,11 @@
       </div>
     </main>
     <footer>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ipsum vero laboriosam similique. Exercitationem ea aliquam soluta tempore laborum repudiandae, aperiam eum praesentium ab velit repellendus a, accusantium blanditiis! Voluptates.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ipsum
+      vero laboriosam similique. Exercitationem ea aliquam soluta tempore
+      laborum repudiandae, aperiam eum praesentium ab velit repellendus a,
+      accusantium blanditiis! Voluptates.
     </footer>
   </body>
+  <script src="script.js"></script>
 </html>
