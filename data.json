@@ -1,0 +1,25 @@
+{
+  "profiles": [
+    {
+      "name": "Yama Kanoguchi",
+      "title": "CEO, Editor",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat libero sed interdum finibus.",
+      "image": "assets/model.png",
+      "background_colors": ["#2ec4b6", "#e0c100", "#ef7c00", "#f44336", "#282828"]
+    },
+    {
+      "name": "Jane Doe",
+      "title": "CTO",
+      "description": "Expert in system architecture and AI.",
+      "image": "assets/model.png",
+      "background_colors": ["#00bcd4", "#ff9800", "#8bc34a", "#9c27b0", "#333333"]
+    },
+    {
+      "name": "John Smith",
+      "title": "UI/UX Designer",
+      "description": "Passionate about clean and effective design.",
+      "image": "assets/model.png",
+      "background_colors": ["#4caf50", "#2196f3", "#f44336", "#ffc107", "#212121"]
+    }
+  ]
+}
