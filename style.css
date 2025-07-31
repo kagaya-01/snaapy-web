@@ -99,6 +99,32 @@ button:focus{
         padding: 0 3rem;
     }
 
+    .gallery-section {
+        background-color: var(--content);
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-section .gallery-col2 {
+        background-color: var(--background);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gallery-section .gallery-col2 .container {
+        color: var(--text);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gallery-section .gallery-col2 .container .title{
+        margin-bottom: 2rem;
+    }
+
 }
 
 @media screen and (max-width: 1100px){
@@ -164,6 +190,16 @@ button:focus{
         color: var(--text);
         padding: var(--btn-size);
         background-color: var(--background);
+    }
+
+    .gallery-section {
+        background-color: var(--content);
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .gallery-section .gallery-col1{
+        display: none;
     }
 }
 
@@ -350,11 +386,10 @@ main{
 .team-section .header h1{
     font-size: 3rem;
     position: relative;
-    top: 2rem;
 }
 
 #profiles-container{
-    overflow-x: scroll;
+    overflow-x: auto;
     display: flex;
     padding: 1rem 0;
     scroll-behavior: smooth;
@@ -422,14 +457,8 @@ main{
     border-radius: 4px;
 }
 
-.gallery-section {
-    background-color: var(--background);
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
 .gallery-section .gallery-col2 {
+    position: relative;
     background-color: var(--background);
     display: flex;
     justify-content: center;
@@ -445,17 +474,34 @@ main{
 }
 
 .gallery-section .gallery-col2 .container .title{
+    color: var(--text);
     margin-bottom: 2rem;
+    z-index: 999;
 }
 
 .gallery-section .gallery-col2 .container button {
     font-size: 1.2rem;
+    z-index: 999;
     /* width: 300px; */
     border: 0;
     border-radius: 12px;
     color: var(--text);
     padding: var(--btn-size);
+    width: var(--btn-size-width);
     background-color: var(--content);
+}
+
+#circle1{
+    z-index: 0;
+    position: absolute;
+    margin-bottom: 10rem;
+    width: 20rem;
+}
+#circle2 {
+    opacity: 1;
+    z-index: 0;
+    position: absolute;
+    max-height: 100%;
 }
 
 .gallery-section .gallery-col2 .container button:hover {
