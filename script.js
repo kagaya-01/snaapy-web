@@ -21,7 +21,6 @@ function openSidebar() {
 fetch('data/data.json')
   .then(response => response.json())
   .then(data => {
-
     // PROFIL MEMBER
     const profilesContainer = document.getElementById('profiles-container');
 
@@ -70,15 +69,17 @@ fetch('data/data.json')
       const button = document.createElement("div");
       button.classList.add("button-container");
       button.innerHTML = ` 
-        <a href="https://wa.me/${data.phone_number}?text=Halo%2C%20saya%20ingin%20tahu%20lebih%20banyak%20tentang%20layanan%20Anda" target="_blank">
+        <a href="https://wa.me/${data.phone_number}?text=Halo%2C%20Halo%20walawe%20aku%20hibban" target="_blank">
           <button class='button-template'>Chat Sekarang</button>
         </a>
-`;
+        `;
 
 
       salesContainer.appendChild(content);
       content.appendChild(button);
     });
+
+    
   })
   .catch(err => {
     console.error("Gagal mengambil data profil:", err);

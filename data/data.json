@@ -26,44 +26,78 @@
   "phone_number":6285814737412,
 
   "price":[
-  {
-    "nama_paket": "Lite Snap",
-    "harga": 500000,
-    "cocok_untuk": "Foto personal, foto produk kecil, atau dokumentasi singkat event",
-    "fasilitas": [
-      "Durasi pemotretan: 1 jam",
-      "15 foto hasil edit profesional",
-      "Semua file original diberikan",
-      "1 lokasi pemotretan",
-      "Pengiriman hasil dalam 3 hari kerja"
-    ]
-  },
-  {
-    "nama_paket": "Perfect Frame",
-    "harga": 1200000,
-    "cocok_untuk": "Prewedding sederhana, foto keluarga, dokumentasi acara",
-    "fasilitas": [
-      "Durasi pemotretan: 3 jam",
-      "40 foto hasil edit profesional",
-      "Semua file original diberikan",
-      "2 lokasi pemotretan",
-      "Cetak 10 lembar ukuran 4R",
-      "Pengiriman hasil dalam 5 hari kerja"
-    ]
-  },
-  {
-    "nama_paket": "Golden Moment",
-    "harga": 2500000,
-    "cocok_untuk": "Acara penting seperti pernikahan, engagement, produk eksklusif, corporate event",
-    "fasilitas": [
-      "Durasi pemotretan: hingga 6 jam",
-      "80+ foto hasil edit profesional",
-      "Semua file original diberikan",
-      "Bebas lokasi (hingga 3 lokasi)",
-      "Album cetak eksklusif ukuran A5",
-      "1 video highlight (durasi ±2 menit)",
-      "Pengiriman hasil dalam 7 hari kerja"
-    ]
-  }
-]
+    {
+      "nama_paket": "Lite Snap",
+      "harga": 500000,
+      "cocok_untuk": "Foto personal, foto produk kecil, atau dokumentasi singkat event",
+      "fasilitas": [
+        "Durasi pemotretan: 1 jam",
+        "15 foto hasil edit profesional",
+        "Semua file original diberikan",
+        "1 lokasi pemotretan",
+        "Pengiriman hasil dalam 3 hari kerja"
+      ]
+    },
+    {
+      "nama_paket": "Perfect Frame",
+      "harga": 1200000,
+      "cocok_untuk": "Prewedding sederhana, foto keluarga, dokumentasi acara",
+      "fasilitas": [
+        "Durasi pemotretan: 3 jam",
+        "40 foto hasil edit profesional",
+        "Semua file original diberikan",
+        "2 lokasi pemotretan",
+        "Cetak 10 lembar ukuran 4R",
+        "Pengiriman hasil dalam 5 hari kerja"
+      ]
+    },
+    {
+      "nama_paket": "Golden Moment",
+      "harga": 2500000,
+      "cocok_untuk": "Acara penting seperti pernikahan, engagement, produk eksklusif, corporate event",
+      "fasilitas": [
+        "Durasi pemotretan: hingga 6 jam",
+        "80+ foto hasil edit profesional",
+        "Semua file original diberikan",
+        "Bebas lokasi (hingga 3 lokasi)",
+        "Album cetak eksklusif ukuran A5",
+        "1 video highlight (durasi ±2 menit)",
+        "Pengiriman hasil dalam 7 hari kerja"
+      ]
+    }
+  ],
+  "imageList": [
+    "../assets/converted_webp/DSC09159.webp",
+    "../assets/converted_webp/DSC09163.webp",
+    "../assets/converted_webp/DSC09165.webp",
+    "../assets/converted_webp/DSC09169.webp",
+    "../assets/converted_webp/DSC09173.webp",
+    "../assets/converted_webp/DSC09174.webp",
+    "../assets/converted_webp/DSC09177.webp",
+    "../assets/converted_webp/DSC09184.webp",
+    "../assets/converted_webp/DSC09187.webp",
+    "../assets/converted_webp/DSC09189.webp",
+    "../assets/converted_webp/DSC09196.webp",
+    "../assets/converted_webp/DSC09201.webp",
+    "../assets/converted_webp/DSC09202.webp",
+    "../assets/converted_webp/DSC09204.webp",
+    "../assets/converted_webp/DSC09205.webp",
+    "../assets/converted_webp/DSC09221.webp",
+    "../assets/converted_webp/DSC09262.webp",
+    "../assets/converted_webp/DSC09264.webp",
+    "../assets/converted_webp/DSC09275.webp",
+    "../assets/converted_webp/DSC09280.webp",
+    "../assets/converted_webp/DSC09293.webp",
+    "../assets/converted_webp/DSC09041.JPG",
+    "../assets/converted_webp/DSC09047.JPG",
+    "../assets/converted_webp/DSC09050.JPG",
+    "../assets/converted_webp/IMG_5133.jpg",
+    "../assets/converted_webp/IMG_5198.jpg",
+    "../assets/converted_webp/IMG_5890.jpg",
+    "../assets/converted_webp/IMG_6031.jpg",
+    "../assets/converted_webp/IMG_6064.jpg",
+    "../assets/converted_webp/IMG_6084.jpg",
+    "../assets/converted_webp/IMG_6260.jpg",
+    "../assets/converted_webp/IMG_6266.jpg"
+  ]
 }
