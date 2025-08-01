@@ -1,3 +1,15 @@
+
+function toRupiah(angka) {
+  return new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    minimumFractionDigits: 0,
+  }).format(angka);
+}
+
+console.log(toRupiah(75000)); // Output: Rp75.000
+
+
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
@@ -29,6 +41,29 @@ fetch('data.json')
   })
   .catch(err => {
     console.error("Gagal mengambil data profil:", err);
+  });
+
+  fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById('sales-container');
+
+    data.price.forEach(price => {
+      
+      const content = document.createElement("div");
+      content.classList.add("content");
+      content.innerHTML = `
+        <div class="price-title">
+          <h1>${price.nama_paket}</h1>
+        </div>
+        <h3>${toRupiah(price.harga)}</h3>
+        <p></p>
+      `
+      container.appendChild(content);
+    });
+  })
+  .catch(err => {
+    console.error("Gagal mengambil data", err);
   });
 
 

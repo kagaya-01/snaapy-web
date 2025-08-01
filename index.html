@@ -5,83 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <title>Snaapy</title>
   </head>
   <!-- Body -->
   <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-      <button id="open-sidebar" onclick="openSidebar()">
-        <img
-          src="assets/icons/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-          alt=""
-        />
-      </button>
-      <img class="logo" src="assets/snaapy-logo.png" alt="" />
-      <ul id="navbar-content">
-        <li>Home</li>
-        <li>Gallery</li>
-        <li>About</li>
-        <li>Harga</li>
-        <li>Cara Pemesanan</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
-
-    <nav class="sidebar" id="sidebar">
-      <div class="header">
-        <img src="assets/snaapy-logo.png" alt="" class="logo" />
-        <button id="close-sidebar" onclick="closeSidebar()">
+    <!-- Main Content -->
+    <main>
+      <!-- Navbar -->
+      <nav class="sidebar" id="sidebar">
+        <div class="header">
+          <img src="assets/snaapy-logo.png" alt="" class="logo" />
+          <button id="close-sidebar" onclick="closeSidebar()">
+            <img
+              src="assets/icons/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </button>
+        </div>
+        <ul>
+          <li>
+            <img
+              src="assets/icons/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />Home
+          </li>
+          <li>
+            <img
+              src="assets/icons/image_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />Gallery
+          </li>
+          <li>
+            <img
+              src="assets/icons/account_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />About
+          </li>
+          <li>
+            <img
+              src="assets/icons/credit_card_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />Harga
+          </li>
+          <li>
+            <img
+              src="assets/icons/help_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />Cara Pemesanan
+          </li>
+          <li>
+            <img
+              src="assets/icons/call_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />Contact
+          </li>
+        </ul>
+      </nav>
+      <nav class="navbar" id="home">
+        <button id="open-sidebar" onclick="openSidebar()">
           <img
-            src="assets/icons/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            src="assets/icons/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
             alt=""
           />
         </button>
-      </div>
-      <ul>
-        <li>
-          <img
-            src="assets/icons/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-            alt=""
-          />Home
-        </li>
-        <li>
-          <img
-            src="assets/icons/image_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-            alt=""
-          />Gallery
-        </li>
-        <li>
-          <img
-            src="assets/icons/account_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-            alt=""
-          />About
-        </li>
-        <li>
-          <img
-            src="assets/icons/credit_card_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-            alt=""
-          />Harga
-        </li>
-        <li>
-          <img
-            src="assets/icons/help_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-            alt=""
-          />Cara Pemesanan
-        </li>
-        <li>
-          <img
-            src="assets/icons/call_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-            alt=""
-          />Contact
-        </li>
-      </ul>
-    </nav>
+        <img class="logo" src="assets/snaapy-logo.png" alt="" />
+        <ul id="navbar-content">
+          <a href="#home"><li>Home</li></a>
+          <a href="#gallery"><li>Gallery</li></a>
+          <li>About</li>
+          <a href="#sale"><li>Harga</li></a>
+          <li>Cara Pemesanan</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
 
-    <!-- Main Content -->
-    <main>
       <section class="home-page">
         <div class="home-content">
           <div class="col-1">
@@ -119,7 +118,7 @@
       </section>
 
       <!-- Team Section -->
-      <section class="team-section">
+      <section class="team-section" id="team">
         <div class="header">
           <h1 data-aos="fade-up">Our Team:</h1>
         </div>
@@ -131,22 +130,50 @@
         <h1 data-aos="fade-up">Lorem ipsum dolor sit amet.</h1>
       </section>
 
-      <div class="gallery-section">
+      <section class="gallery-section" id="gallery">
         <div class="gallery-col1"></div>
         <div class="gallery-col2">
           <div class="container">
-            <img data-aos="fade-up" id="circle1" src="assets/070402/10.svg" alt="">
-            <img id="circle2" src="assets/070402/15.svg" alt="">
+            <img
+              data-aos="fade-up"
+              id="circle1"
+              src="assets/070402/10.svg"
+              alt=""
+            />
+            <img id="circle2" src="assets/070402/15.svg" alt="" />
             <div data-aos="fade-up" class="title">
               <h1>Our Stories</h1>
             </div>
             <button data-aos="fade-up">Seek!</button>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section class="saperate-black">
+        <h1 data-aos="fade-up">Lorem ipsum dolor sit amet.</h1>
+      </section>
+
+      <section class="sale-section" id="sale">
+        <div data-aos="fade-up" class="header">
+          <h1>Price Tag</h1>
+        </div>
+        <img
+          src="assets/070402/12.svg"
+          class="decor-assets"
+          id="waves-1"
+          alt=""
+        />
+        <img
+          src="assets/070402/11.svg"
+          class="decor-assets"
+          id="waves-2"
+          alt=""
+        />
+        <div id="sales-container"></div>
+      </section>
     </main>
     <footer>
-      <div class="container" data-aos="fade-up">
+      <div class="container">
         <!-- Kontak -->
         <div class="contact-footer">
           <h3 style="margin-bottom: 1rem">Contact</h3>
@@ -206,8 +233,8 @@
         "
       >
         <br />
-        &copy; 2025 Snaapy. All rights reserved.
-        &copy; sample. All rights reserved.
+        &copy; 2025 Snaapy. All rights reserved. &copy; sample. All rights
+        reserved.
         <br /><br />
       </div>
     </footer>
@@ -218,6 +245,4 @@
   <script>
     AOS.init();
   </script>
-
-  
 </html>
