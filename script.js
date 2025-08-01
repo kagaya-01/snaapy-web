@@ -70,7 +70,7 @@ fetch('data/data.json')
       button.classList.add("button-container");
       button.innerHTML = ` 
         <a href="https://wa.me/${data.phone_number}?text=Halo%2C%20Halo%20walawe%20aku%20hibban" target="_blank">
-          <button class='button-template'>Chat Sekarang</button>
+          <button class='button-template'>Beli</button>
         </a>
         `;
 
