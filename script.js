@@ -1,4 +1,3 @@
-
 function toRupiah(angka) {
   return new Intl.NumberFormat("id-ID", {
     style: "currency",
@@ -7,10 +6,19 @@ function toRupiah(angka) {
   }).format(angka);
 }
 
-console.log(toRupiah(75000)); // Output: Rp75.000
+function closeSidebar() { 
+    close = document.getElementById("close-sidebar");
+    sidebar = document.getElementById('sidebar');
+    sidebar.style.transform = 'translate(-20rem, 0)'; 
+}
 
+function openSidebar() { 
+    close = document.getElementById("open-sidebar");
+    sidebar = document.getElementById('sidebar');
+    sidebar.style.transform = 'translate(0, 0)'; 
+}
 
-fetch('data.json')
+fetch('data/data.json')
   .then(response => response.json())
   .then(data => {
 
@@ -59,9 +67,13 @@ fetch('data.json')
         ${list}
         </ul>
       `
-      const button = document.createElement("button");
-      button.classList.add("button-template");
-      button.innerHTML = 'Kontak Sekarang!';
+      const button = document.createElement("div");
+      button.classList.add("button-container");
+      button.innerHTML = ` 
+        <a href="https://wa.me/${data.phone_number}?text=Halo%2C%20saya%20ingin%20tahu%20lebih%20banyak%20tentang%20layanan%20Anda" target="_blank">
+          <button class='button-template'>Chat Sekarang</button>
+        </a>
+`;
 
 
       salesContainer.appendChild(content);
@@ -71,15 +83,3 @@ fetch('data.json')
   .catch(err => {
     console.error("Gagal mengambil data profil:", err);
 });
-
-function closeSidebar() { 
-    close = document.getElementById("close-sidebar");
-    sidebar = document.getElementById('sidebar');
-    sidebar.style.transform = 'translate(-20rem, 0)'; 
-}
-
-function openSidebar() { 
-    close = document.getElementById("open-sidebar");
-    sidebar = document.getElementById('sidebar');
-    sidebar.style.transform = 'translate(0, 0)'; 
-}

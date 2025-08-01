@@ -13,6 +13,7 @@
   <body>
     <!-- Main Content -->
     <main id="home">
+
       <!-- Navbar -->
       <nav class="sidebar" id="sidebar">
         <div class="header">
@@ -25,42 +26,10 @@
           </button>
         </div>
         <ul>
-          <li>
-            <img
-              src="assets/icons/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-              alt=""
-            />Home
-          </li>
-          <li>
-            <img
-              src="assets/icons/image_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-              alt=""
-            />Gallery
-          </li>
-          <li>
-            <img
-              src="assets/icons/account_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-              alt=""
-            />About
-          </li>
-          <li>
-            <img
-              src="assets/icons/credit_card_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-              alt=""
-            />Harga
-          </li>
-          <li>
-            <img
-              src="assets/icons/help_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-              alt=""
-            />Cara Pemesanan
-          </li>
-          <li>
-            <img
-              src="assets/icons/call_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-              alt=""
-            />Contact
-          </li>
+          <a href="#home"><li><i class="fa-solid fa-house"></i>ome</li></a>
+          <a href="#team"><li><i class="fa-solid fa-circle-user"></i>About</li></a>
+          <a href="#gallery"><li><i class="fa-solid fa-images"></i>Gallery</li></a>
+          <a href="#sale"><li><i class="fa-solid fa-dollar-sign"></i>Harga</li></a>
         </ul>
       </nav>
       <nav class="navbar">
@@ -73,11 +42,11 @@
         <img class="logo" src="assets/snaapy-logo.png" alt="" />
         <ul id="navbar-content">
           <a href="#home"><li>Home</li></a>
+          <a href="#team"><li>About</li></a>
           <a href="#gallery"><li>Gallery</li></a>
-          <li>About</li>
           <a href="#sale"><li>Harga</li></a>
-          <li>Cara Pemesanan</li>
-          <li>Contact</li>
+          <!-- <li>Cara Pemesanan</li>
+          <li>Contact</li> -->
         </ul>
       </nav>
 
@@ -91,23 +60,23 @@
               <img src="assets/snaapy-logo.png" alt="" id="home-logo" />
               <p id="paragraph-1">
                 <strong
-                  >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Praesentium asperiores accusantium ab. Aspernatur maiores
-                  velit, quaerat, maxime beatae tempora.!</strong
+                  >Ciptakan Kenangan Kami menghadirkan
+                  layanan fotografi profesional untuk setiap momen penting dalam
+                  hidup Anda. Dari prewedding hingga acara perusahaan, Snaapy
+                  siap mengabadikan semuanya dengan kualitas terbaik.</strong
                 >
               </p>
               <div id="landing-pg-text">
-                <h1>Tangkap momenmu bersama kami!</h1>
+                <img class="logo-2" src="assets/snaapy-logo.png" alt="" />
+                <h3>Tangkap momenmu bersama kami!</h1>
                 <p>
-                  Abadikan Momen, Ciptakan Kenangan Kami menghadirkan
-                  layanan fotografi profesional untuk setiap momen penting dalam
-                  hidup Anda. Dari prewedding hingga acara perusahaan, Snaapy
+                  Abadikan Momen, Ciptakan kenangan dari prewedding hingga acara perusahaan, Snaapy
                   siap mengabadikan semuanya dengan kualitas terbaik.
                 </p>
               </div>
             </div>
             <div class="content-2">
-              <button>Buy Now!</button>
+             <a href="#sale"><button>Buy Now!</button></a>
             </div>
           </div>
           <!-- Col 2 -->
@@ -157,8 +126,8 @@
         <h1 data-aos="fade-up">Lorem ipsum dolor sit amet.</h1>
       </section>
 
-      <section class="sale-section" id="sale">
-        <div data-aos="fade-up" class="header">
+      <section class="sale-section">
+        <div data-aos="fade-up" class="header" id="sale">
           <h1>Price Tag</h1>
         </div>
         <img
@@ -173,7 +142,9 @@
           id="waves-2"
           alt=""
         />
-        <div id="sales-container" data-aos="fade-up"></div>
+        <div id="sales-container" data-aos="fade-up">
+
+        </div>
       </section>
     </main>
     <footer>
@@ -189,8 +160,8 @@
           </p>
           <p>
             Phone:
-            <a href="tel:+6281234567890" style="color: #ccc"
-              >+62 4545 45454 454</a
+            <a href="tel:+6285814737412" style="color: #ccc"
+              >+6285814737412</a
             >
           </p>
           <p>Location: Jakarta, Indonesia</p>
@@ -204,25 +175,19 @@
               href="https://facebook.com"
               target="_blank"
               style="color: white; text-decoration: none"
-              >Facebook</a
+              ><i class="fa-brands fa-facebook"></i></a
             >
             <a
               href="https://twitter.com"
               target="_blank"
               style="color: white; text-decoration: none"
-              >Twitter</a
+              ><i class="fa-brands fa-x-twitter"></i></a
             >
             <a
               href="https://instagram.com"
               target="_blank"
               style="color: white; text-decoration: none"
-              >Instagram</a
-            >
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              style="color: white; text-decoration: none"
-              >LinkedIn</a
+              ><i class="fa-brands fa-instagram"></i></a
             >
           </div>
         </div>
@@ -237,8 +202,7 @@
         "
       >
         <br />
-        &copy; 2025 Snaapy. All rights reserved. &copy; sample. All rights
-        reserved.
+        &copy; 2025 Snaapy. All rights reserved.
         <br /><br />
       </div>
     </footer>
@@ -246,6 +210,7 @@
   <!-- JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/47442d4b0b.js" crossorigin="anonymous"></script>
   <script>
     AOS.init();
   </script>

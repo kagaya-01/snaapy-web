@@ -60,12 +60,12 @@ button:focus{
         flex-direction: column;
         width: 100%;
         box-sizing: border-box;
-        padding: 3.5rem 9rem;
+        padding: 3.5rem 7rem;
         gap: 2rem
     }
 
     #home-logo {
-        width: 85%;
+        width: 70%;
     }
 
     .home-content .col-1 .content-2 button {
@@ -138,6 +138,9 @@ button:focus{
 }
 
 @media screen and (max-width: 1100px){
+    .logo-2 {
+        width: 50%;
+    }
     #navbar-content {
         display: none;
     }
@@ -175,7 +178,6 @@ button:focus{
         justify-content: center;
         align-items: center;
         padding: 1rem;
-        max-width: 100%;
         box-sizing: border-box;
         gap: 3rem
     }
@@ -218,10 +220,6 @@ button:focus{
     }
 }
 
-@media screen and (max-width: 900px){
-    
-}
-
 body{
     max-height: 100vh;
     display: grid;
@@ -231,6 +229,7 @@ body{
 
 main{
     min-width: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -325,7 +324,11 @@ main{
     display: flex;
     align-items: center;
     list-style: none;
-    padding: 1rem 3rem;
+    padding: 1rem 6rem 1rem 2rem;
+}
+
+.sidebar ul li i{
+    padding: 0 1rem 0 0;
 }
 
 .sidebar label{
@@ -471,15 +474,6 @@ main{
     margin-top: 1em;
 }
 
-.scroll-container::-webkit-scrollbar {
-    height: 8px;
-}
-
-.scroll-container::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 4px;
-}
-
 .gallery-section .gallery-col2 {
     position: relative;
     background-color: var(--background);
@@ -566,7 +560,7 @@ main{
     border-radius: 12px;
     color: var(--text);
     padding: var(--btn-size);
-    width: 90%;
+    width: 100%;
     background-color: var(--background);
 }
 
@@ -640,9 +634,11 @@ main{
     box-sizing: border-box;
 }
 
-#sales-container .content button {
+#sales-container .content .button-container {
+    justify-content: center;
     align-self: center;
     position: absolute;
+    width: 90%;
     bottom: 1rem;
 }
 
@@ -665,6 +661,6 @@ footer .container {
     gap: 2rem;
 }
 
-footer .social-media div{
-    flex-direction: column;
+footer .social-media i{
+    font-size: 1.5rem;
 }
