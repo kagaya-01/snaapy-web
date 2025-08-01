@@ -13,7 +13,9 @@ console.log(toRupiah(75000)); // Output: Rp75.000
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
-    const container = document.getElementById('profiles-container');
+
+    // PROFIL MEMBER
+    const profilesContainer = document.getElementById('profiles-container');
 
     data.profiles.forEach(profile => {
       const bars = profile.background_colors.map(color => {
@@ -36,20 +38,16 @@ fetch('data.json')
         </div>
       `;
 
-      container.appendChild(card);
+      profilesContainer.appendChild(card);
     });
-  })
-  .catch(err => {
-    console.error("Gagal mengambil data profil:", err);
-  });
 
-  fetch('data.json')
-  .then(response => response.json())
-  .then(data => {
-    const container = document.getElementById('sales-container');
+    //HARGA PAKET
+    const salesContainer = document.getElementById('sales-container');
 
     data.price.forEach(price => {
-      
+      const list = price.fasilitas.map(fasilitas => {
+        return `<li>${fasilitas}</li>`;
+      }).join('');
       const content = document.createElement("div");
       content.classList.add("content");
       content.innerHTML = `
@@ -57,15 +55,22 @@ fetch('data.json')
           <h1>${price.nama_paket}</h1>
         </div>
         <h3>${toRupiah(price.harga)}</h3>
-        <p></p>
+        <ul>
+        ${list}
+        </ul>
       `
-      container.appendChild(content);
+      const button = document.createElement("button");
+      button.classList.add("button-template");
+      button.innerHTML = 'Kontak Sekarang!';
+
+
+      salesContainer.appendChild(content);
+      content.appendChild(button);
     });
   })
   .catch(err => {
-    console.error("Gagal mengambil data", err);
-  });
-
+    console.error("Gagal mengambil data profil:", err);
+});
 
 function closeSidebar() { 
     close = document.getElementById("close-sidebar");

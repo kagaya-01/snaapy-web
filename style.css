@@ -93,6 +93,10 @@ button:focus{
         width: 70%;
     }
 
+    #image-slideshow{
+        display: none;
+    }
+
     #landing-pg-text {
         display: none;
     }
@@ -142,6 +146,15 @@ button:focus{
         display: block;
     }
 
+    #landing-pg-text h1{
+        font-size: 2.7rem;
+        margin-bottom: 2rem;
+    }
+
+    #image-slideshow{
+        position: absolute;
+    }
+
     .home-content {
         font-size: large;
         color: var(--text);
@@ -161,7 +174,7 @@ button:focus{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0.5rem;
+        padding: 1rem;
         max-width: 100%;
         box-sizing: border-box;
         gap: 3rem
@@ -192,6 +205,7 @@ button:focus{
         padding: var(--btn-size);
         background-color: var(--background);
     }
+    
 
     .gallery-section {
         background-color: var(--content);
@@ -226,7 +240,7 @@ main{
 
 .navbar{
     top: 0;
-    height: 10vh;
+    height: min-content;
     width: 100%;
     gap: 2rem;
     display: inline-flex;
@@ -237,7 +251,7 @@ main{
     top: 0;
     z-index: 999;
     box-sizing: border-box;
-    padding: 0.5rem 2rem;
+    padding: 0 2rem;
 
 }
 
@@ -485,12 +499,12 @@ main{
 .gallery-section .gallery-col2 .container .title{
     color: var(--text);
     margin-bottom: 2rem;
-    z-index: 999;
+  
 }
 
 .gallery-section .gallery-col2 .container button {
     font-size: 1.2rem;
-    z-index: 999;
+   
     /* width: 300px; */
     border: 0;
     border-radius: 12px;
@@ -526,6 +540,7 @@ main{
 
 .sale-section{
     overflow-y: hidden;
+    min-height: 100vh;
     position: relative;
     background-color: var(--background);
 
@@ -543,6 +558,24 @@ main{
     width: 4rem;
 }
 
+.button-template {
+    font-size: 1.2rem;
+
+    /* width: 300px; */
+    border: 0;
+    border-radius: 12px;
+    color: var(--text);
+    padding: var(--btn-size);
+    width: 90%;
+    background-color: var(--background);
+}
+
+.button-template:hover {
+    border: 0;
+    border-radius: 12px;
+    background-color: var(--content);
+}
+
 #waves-1{
     width: 10rem;
     right: 0;
@@ -557,14 +590,17 @@ main{
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    justify-content: center;
-    height: 100vh;
+    align-items: center;
+    justify-content:center;
     padding: 0 2rem;
     gap: 2rem;
+    margin-bottom: 1rem;
+    overflow-y: auto;
 }
 
 #sales-container .content {
-    max-height: 25rem;
+    position: relative;
+    min-height: 30rem;
     border-radius: 20px;
     padding: 1.7rem;
     display: flex;
@@ -572,7 +608,7 @@ main{
     align-items: center;
     align-items:flex-start;
     box-sizing: border-box;
-    width: 20rem;
+    width: 25rem;
     background-color: var(--background2);
 }
 
@@ -589,6 +625,25 @@ main{
 
 #sales-container .content p{
     margin-top: 20px;
+}
+
+#sales-container .content ul{
+    position: relative;
+    list-style:circle ;
+    list-style-position: inside;
+    box-sizing: border-box;
+}
+
+#sales-container .content ul {
+    list-style: circle;
+    list-style-position: inside;
+    box-sizing: border-box;
+}
+
+#sales-container .content button {
+    align-self: center;
+    position: absolute;
+    bottom: 1rem;
 }
 
 .price-title{
