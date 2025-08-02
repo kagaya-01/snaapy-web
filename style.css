@@ -384,6 +384,7 @@ section{
 }
 
 .saperate{
+    overflow-y: hidden;
     text-align: center;
     box-sizing: border-box;
     padding: 1.2rem 0;
@@ -391,6 +392,7 @@ section{
 }
 
 .saperate-black {
+    overflow-y: hidden;
     box-sizing: border-box;
     padding: 1.2rem 0;
     text-align: center;
