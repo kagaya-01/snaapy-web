@@ -13,7 +13,6 @@
   <body>
     <!-- Main Content -->
     <main id="home">
-
       <!-- Navbar -->
       <nav class="sidebar" id="sidebar">
         <div class="header">
@@ -26,14 +25,23 @@
           </button>
         </div>
         <ul>
-          <a href="#home"><li><i class="fa-solid fa-house"></i>ome</li></a>
-          <a href="#team"><li><i class="fa-solid fa-circle-user"></i>About</li></a>
-          <a href="#gallery"><li><i class="fa-solid fa-images"></i>Gallery</li></a>
-          <a href="#sale"><li><i class="fa-solid fa-dollar-sign"></i>Harga</li></a>
+          <a href="#home"
+            ><li><i class="fa-solid fa-house"></i>ome</li></a
+          >
+          <a href="#team"
+            ><li><i class="fa-solid fa-circle-user"></i>About</li></a
+          >
+          <a href="#gallery"
+            ><li><i class="fa-solid fa-images"></i>Gallery</li></a
+          >
+          <a href="#sale"
+            ><li><i class="fa-solid fa-dollar-sign"></i>Harga</li></a
+          >
         </ul>
       </nav>
       <nav class="navbar">
         <button id="open-sidebar" onclick="openSidebar()">
+          <div class="gray-filter"></div>
           <img
             src="assets/icons/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
             alt=""
@@ -52,30 +60,30 @@
 
       <section class="home-page">
         <div class="home-content">
-          <div id="image-slideshow">
-            
-          </div>
+          <div id="image-slideshow"></div>
           <div class="col-1">
             <div class="content-1">
               <img src="assets/snaapy-logo.png" alt="" id="home-logo" />
               <div id="paragraph-1">
-                <h3>Tangkap momenmu bersama kami!</h1>
+                <h3>Tangkap momenmu bersama kami!</h3>
                 <p>
-                  Abadikan Momen, Ciptakan kenangan dari prewedding hingga acara perusahaan, Snaapy
-                  siap mengabadikan semuanya dengan kualitas terbaik.
+                  Abadikan Momen, Ciptakan kenangan dari prewedding hingga acara
+                  perusahaan, Snaapy siap mengabadikan semuanya dengan kualitas
+                  terbaik.
                 </p>
               </div>
               <div id="landing-pg-text">
                 <img class="logo-2" src="assets/snaapy-logo.png" alt="" />
-                <h3>Tangkap momenmu bersama kami!</h1>
+                <h3>Tangkap momenmu bersama kami!</h3>
                 <p>
-                  Abadikan Momen, Ciptakan kenangan dari prewedding hingga acara perusahaan, Snaapy
-                  siap mengabadikan semuanya dengan kualitas terbaik.
+                  Abadikan Momen, Ciptakan kenangan dari prewedding hingga acara
+                  perusahaan, Snaapy siap mengabadikan semuanya dengan kualitas
+                  terbaik.
                 </p>
               </div>
             </div>
             <div class="content-2">
-             <a href="#sale"><button>Buy Now!</button></a>
+              <a href="#sale"><button>Buy Now!</button></a>
             </div>
           </div>
           <!-- Col 2 -->
@@ -85,8 +93,65 @@
         </div>
       </section>
       <!-- Pemisah 1 -->
-      <section class="saperate-black">
+      <section class="saperate">
         <h1 data-aos="fade-up">Kualitas maksimum</h1>
+      </section>
+
+      <!-- About Section -->
+
+      <section class="abt-section">
+        <div class="header" id="abt-header" data-aos="fade-right">
+          <h1>About Us</h1>
+        </div>
+        <div id="description" class="abt-content" data-aos="fade-right">
+          <p>
+            <strong>Snaapy</strong> adalah layanan fotografi profesional yang
+            siap membantu Anda mengabadikan setiap momen berharga dalam hidup.
+            Kami menyediakan jasa pemotretan untuk berbagai kebutuhan, mulai
+            dari <strong>Prewedding, Pernikahan, Foto produk</strong>, hingga
+            <strong>dokumentasi Event</strong>. Dengan sentuhan estetika yang
+            khas dan pendekatan personal, setiap hasil jepretan kami dirancang
+            untuk menggambarkan cerita Anda secara visual, tajam, dan emosional.
+          </p>
+          <div class="image-wrapper-abt" data-aos="fade-up">
+            <img src="assets/photo/Takberjudul30_20250730005612.png" alt="" />
+          </div>
+        </div>
+
+        <div class="header" id="abt-header" data-aos="fade-right">
+          <h1>About Us</h1>
+        </div>
+
+        <div id="description-2" class="abt-content">
+          <div class="image-wrapper-abt" data-aos="fade-up">
+            <img src="assets/photo/Takberjudul30_20250730005612.png" alt="" />
+          </div>
+          <ul class="abt-content" data-aos="fade-left">
+            <li>
+              💑 Pasangan yang ingin mengabadikan momen spesial seperti
+              <strong>prewedding</strong> atau <strong>pernikahan</strong>
+            </li>
+            <li>
+              🛍️ Pemilik bisnis yang membutuhkan
+              <strong>foto produk berkualitas</strong> untuk promosi dan katalog
+            </li>
+            <li>
+              🧑‍💼 Perusahaan atau komunitas yang mencari dokumentasi profesional
+              untuk <strong>event dan kegiatan</strong>
+            </li>
+            <li>
+              👨‍👩‍👧‍👦 Individu, keluarga, atau teman-teman yang ingin memiliki
+              <strong>sesi foto personal</strong> yang berkesan
+            </li>
+          </ul>
+        </div>
+
+        <!-- <div id="description-2">
+        </div> -->
+      </section>
+
+      <section class="saperate-black">
+        <h1 data-aos="fade-up">Abadikan Pertualangan</h1>
       </section>
 
       <!-- Team Section -->
@@ -94,7 +159,7 @@
         <div class="header">
           <h1 data-aos="fade-up">Our Team:</h1>
         </div>
-        <div id="profiles-container" data-aos="fade-left"></div>
+        <div id="profileContainer" data-aos="fade-left"></div>
       </section>
 
       <!-- Pemisah 1 -->
@@ -104,7 +169,10 @@
 
       <section class="gallery-section" id="gallery">
         <div class="gallery-col1">
-          <img src="assets/photo/37836-3840x2160-desktop-4k-acdc-wallpaper-image.jpg" alt="">
+          <img
+            src="assets/photo/37836-3840x2160-desktop-4k-acdc-wallpaper-image.jpg"
+            alt=""
+          />
         </div>
         <div class="gallery-col2">
           <div class="container">
@@ -143,9 +211,7 @@
           id="waves-2"
           alt=""
         />
-        <div id="sales-container" data-aos="fade-up">
-
-        </div>
+        <div id="sales-container" data-aos="fade-up"></div>
       </section>
 
       <!-- Testimony -->
@@ -156,7 +222,6 @@
         </div>
         <div id="testimony-container" data-aos="fade-left"></div>
       </section> -->
-
     </main>
     <footer>
       <div class="container">
@@ -171,9 +236,7 @@
           </p>
           <p>
             Phone:
-            <a href="tel:+6285814737412" style="color: #ccc"
-              >+6285814737412</a
-            >
+            <a href="tel:+6285814737412" style="color: #ccc">+6285814737412</a>
           </p>
           <p>Location: Jakarta, Indonesia</p>
         </div>
@@ -186,20 +249,20 @@
               href="https://facebook.com"
               target="_blank"
               style="color: white; text-decoration: none"
-              ><i class="fa-brands fa-facebook"></i></a
-            >
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
             <a
               href="https://twitter.com"
               target="_blank"
               style="color: white; text-decoration: none"
-              ><i class="fa-brands fa-x-twitter"></i></a
-            >
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
             <a
               href="https://instagram.com"
               target="_blank"
               style="color: white; text-decoration: none"
-              ><i class="fa-brands fa-instagram"></i></a
-            >
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -219,9 +282,12 @@
     </footer>
   </body>
   <!-- JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
-  <script src="https://kit.fontawesome.com/47442d4b0b.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script
+    src="https://kit.fontawesome.com/47442d4b0b.js"
+    crossorigin="anonymous"
+  ></script>
   <script>
     AOS.init();
   </script>

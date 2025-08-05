@@ -12,14 +12,64 @@
   </head>
   <!-- Body -->
   <body>
-    <!-- Main Content -->
-    <main style="background-color: var(--background); color: var(--text);">
-      <div class="header">
-        <a href="index.html"><button id="back" class="button-template"> <- Back</button></a>
-        <h1>Gallery:</h1>
+    <header class="header">
+      <a href="index.html"
+        ><button id="back" class="button-template"><- Back</button></a
+      >
+      <div class="bg-container">
+        <div class="header-bloom"></div>
+        <div class="header-bg">
+          <img
+            src="assets/snaapy-logo.png"
+            alt=""
+            id="snaapy-logo"
+          />
+          Our Memories
+        </div>
+        <div class="header-bloom"></div>
       </div>
-      <div id="image">
-        
+    </header>
+    <!-- Main Content -->
+    <main style="background-color: var(--background); color: var(--text)">
+      <!-- <div class="event-gallery"></div>
+      <div class="profile-gallery"></div>
+      <div class="product-gallery"></div> -->
+      <!-- <div class="model-gallery"></div> -->
+      <nav class="nav-content">
+        <div class="dropdown">
+          <label for="openDropdown">
+            <img class="icon" id="open-icon"
+              src="assets/icons/format_list_bulleted_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+            <img class="icon" id="close-icon"
+              src="assets/icons/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </label>
+          <input type="checkbox" id="openDropdown">
+          <!-- dropdown -->
+          <ul class="dropdown-container" id="dropdown">
+            <a href="#home"><li>All</li></a>
+            <a href="#team"><li>About</li></a>
+            <a href="#gallery"><li>Gallery</li></a>
+            <a href="#sale"><li>Harga</li></a>
+          </ul>
+        </div>
+        <nav class="navbar-gallery">
+          <ul id="navbar-gallery">
+            <a onclick=""><li>Event</li></a>
+            <a onclick=""><li>Profile</li></a>
+            <a onclick=""><li>Product</li></a>
+            <a onclick=""><li>Model</li></a>
+            <!-- <li>Cara Pemesanan</li>
+            <li>Contact</li> -->
+          </ul>
+        </nav>
+      </nav>
+
+      <div id="image-container">
+
       </div>
     </main>
     <footer>
@@ -35,9 +85,7 @@
           </p>
           <p>
             Phone:
-            <a href="tel:+6285814737412" style="color: #ccc"
-              >+6285814737412</a
-            >
+            <a href="tel:+6285814737412" style="color: #ccc">+6285814737412</a>
           </p>
           <p>Location: Jakarta, Indonesia</p>
         </div>
@@ -50,20 +98,20 @@
               href="https://facebook.com"
               target="_blank"
               style="color: white; text-decoration: none"
-              ><i class="fa-brands fa-facebook"></i></a
-            >
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
             <a
               href="https://twitter.com"
               target="_blank"
               style="color: white; text-decoration: none"
-              ><i class="fa-brands fa-x-twitter"></i></a
-            >
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
             <a
               href="https://instagram.com"
               target="_blank"
               style="color: white; text-decoration: none"
-              ><i class="fa-brands fa-instagram"></i></a
-            >
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -84,26 +132,29 @@
   </body>
   <!-- JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
   <script>
-    fetch('data/data.json')
-      .then(response => response.json())
-      .then(data => {//GALLERY
-        const imageContainer = document.getElementById('image');
+    const dropdownId = document.getElementById('openDropdown');
+    dropdownId.addEventListener("change", function() { 
+      const dropdownCont = document.getElementById('dropdown');
+      const iconOpen = document.getElementById('open-icon');
+      const iconClosed = document.getElementById('close-icon');
+      if (this.checked) {
+        iconClosed.style.opacity = '1';
+        iconOpen.style.opacity = '0';
+        dropdownCont.style.display = 'block';
 
-        data.imageList.forEach(image => {
-          const contentImage = document.createElement('div');
-          contentImage.classList.add('image');
-          contentImage.innerHTML = `
-            <img src="${image}"/>
-          `
-          imageContainer.appendChild(contentImage);
-        });
-      })
-      .catch(err => {
-        console.error("Gagal mengambil data profil:", err);
+      } else { 
+        iconClosed.style.opacity = '0';
+        iconOpen.style.opacity = '1';
+        dropdownCont.style.display = 'none';
+      }
     });
   </script>
-  <script src="https://kit.fontawesome.com/47442d4b0b.js" crossorigin="anonymous"></script>
+  <script
+    src="https://kit.fontawesome.com/47442d4b0b.js"
+    crossorigin="anonymous"
+  ></script>
   <script>
     AOS.init();
   </script>

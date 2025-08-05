@@ -6,24 +6,26 @@ function toRupiah(angka) {
   }).format(angka);
 }
 
+//SIDEBAR
 function closeSidebar() { 
-    close = document.getElementById("close-sidebar");
-    sidebar = document.getElementById('sidebar');
-    sidebar.style.transform = 'translate(-20rem, 0)'; 
+  const close = document.getElementById("close-sidebar");
+  const sidebar = document.getElementById('sidebar');
+  sidebar.style.transform = 'translate(-20rem, 0)'; 
 }
 
 function openSidebar() { 
-    close = document.getElementById("open-sidebar");
-    sidebar = document.getElementById('sidebar');
-    sidebar.style.transform = 'translate(0, 0)'; 
+  const open = document.getElementById("open-sidebar");
+  const　sidebar = document.getElementById('sidebar');
+  sidebar.style.transform = 'translate(0, 0)'; 
 }
 
-fetch('data/data.json')
+//FETCH DATA PROFIL
+fetch('data/profile.json')
   .then(response => response.json())
   .then(data => {
     // PROFIL MEMBER
-    const profilesContainer = document.getElementById('profiles-container');
-
+  const profilesContainer = document.getElementById("profileContainer");
+    console.log(data.profiles);
     data.profiles.forEach(profile => {
       const bars = profile.background_colors.map(color => {
         return `<div style="background: ${color}"></div>`;
@@ -47,14 +49,21 @@ fetch('data/data.json')
 
       profilesContainer.appendChild(card);
     });
-
-    //HARGA PAKET
+  })
+.catch(err => {
+  console.error("Gagal mengambil data profil:", err);
+});
+//FETCH DATA HARGA
+fetch('data/price.json')
+  .then(response => response.json())
+  .then(data => {
     const salesContainer = document.getElementById('sales-container');
-
-    data.price.forEach(price => {
+    //BUAT UL UNTUK FASILITAS
+    data.price_list.forEach(price => {
       const list = price.fasilitas.map(fasilitas => {
         return `<li>${fasilitas}</li>`;
       }).join('');
+
       const content = document.createElement("div");
       content.classList.add("content");
       content.innerHTML = `
@@ -73,14 +82,31 @@ fetch('data/data.json')
           <button class='button-template'>Beli</button>
         </a>
         `;
-
-
       salesContainer.appendChild(content);
       content.appendChild(button);
     });
+  }).catch(err => {
+      'Gagal Ambil data harga', err
+  });
 
-    
+  //FETCH DATA GALLERY
+fetch("data/image.json")
+  .then(response => response.json())
+  .then(data => {
+    //GALLERY
+    const imageContainer = document.getElementById("image-container");
+
+    data.imageList.forEach(image => {
+      const contentImage = document.createElement("div");
+      contentImage.classList.add("image");
+      contentImage.innerHTML = `
+        <div class="images-wrapper">
+          <img src="${image}"/>
+        </div>
+      `;
+      imageContainer.appendChild(contentImage);
+    });
   })
-  .catch(err => {
-    console.error("Gagal mengambil data profil:", err);
+.catch(err => {
+  console.error("Gagal mengambil data profil:", err);
 });
