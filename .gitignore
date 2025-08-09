@@ -1,13 +1,9 @@
 # Mengabaikan file log
 *.log
 
-# Mengabaikan folder node_modules
-node_modules/
-
 # Mengabaikan semua file .env
 .env
 
+# Mengabaikan folder data
 data/
 
-# Mengabaikan semua file sementara di folder temp
-temp/*
