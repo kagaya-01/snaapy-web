@@ -141,11 +141,6 @@ button:focus{
     .gallery-section .gallery-col2 .container .title{
         margin-bottom: 2rem;
     }
-    #description-2 {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-    }
-
 }
 
 @media screen and (max-width: 1100px){
@@ -462,6 +457,11 @@ section{
     display: flex; 
     flex-direction: column;
     margin-left: 3rem;
+
+}
+
+.abt-content li {
+
 
 }
 

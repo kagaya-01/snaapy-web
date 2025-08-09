@@ -6,16 +6,25 @@ function toRupiah(angka) {
   }).format(angka);
 }
 
+//SERVICES
+const abtServices = document.getElementById("abt-content-list");
+
+fetch('data/services.json')
+  .then(response => response.json)
+  .then(data => { 
+    data.forEach(services => { 
+
+    })
+  })
+  .catch(err => { 'error fetch', err})
 //SIDEBAR
 function closeSidebar() { 
-  const close = document.getElementById("close-sidebar");
   const sidebar = document.getElementById('sidebar');
   sidebar.style.transform = 'translate(-20rem, 0)'; 
 }
 
-function openSidebar() { 
-  const open = document.getElementById("open-sidebar");
-  const　sidebar = document.getElementById('sidebar');
+function openSidebar(){ 
+  const sidebar = document.getElementById('sidebar');
   sidebar.style.transform = 'translate(0, 0)'; 
 }
 

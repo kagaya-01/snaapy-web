@@ -197,11 +197,16 @@ input{
 
 #image-container .images-wrapper{
     position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
 }
 
 #image-container img {
-    border-radius: 12px;
-    width: 300px;
+    width: inherit;
 }
 
 #image-container img:hover {
